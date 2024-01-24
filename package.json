@@ -1,0 +1,23 @@
+{
+  "name": "fsfe",
+  "version": "1.0.0",
+  "description": "web sockets and clients",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jks403/fsfe.git"
+  },
+  "author": "joshua stewart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jks403/fsfe/issues"
+  },
+  "homepage": "https://github.com/jks403/fsfe#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.16.0"
+  }
+}
