@@ -11,14 +11,9 @@ app.get('/', function(req, res) {
 server.on('request', app);
 server.listen(3000, function() {console.log('server started on port 3000');});
 
-process.on('SIGINT', () =>  {
-    console.log('sigint')
-    wss.clients.forEach(function each(client ) {
-        client.close();
-    });
+process.on('SIGNINT', ()  =>  {
     server.close(()  => {
         shutdownDB();
-
     })
 })
 
@@ -34,12 +29,13 @@ wss.on('connection', function connection(ws) {
     wss.broadcast(`Current Visitors: ${numClients}`);
 
     if(ws.readyState === ws.OPEN) {
-        ws.send("Welcome to my server Joshua. It is working");
+        ws.send("Welcome to my server ");
     }
 
-    db.run(`INSERT INTO visitors (count, time)
-       VALUES (${numClients},  (datetime('now'))
-    `)
+    db.run(`INSERT INTO visitors (count,time) 
+            VALUES(${numClients}, datetime('now'))
+    
+    `);
 
     wss.on('close', function close() {
         wss.broadcast(`Current Visitors: ${numClients}`);
@@ -63,17 +59,18 @@ wss.broadcast = function broadcast(data) {
 const sqlite = require('sqlite3');
 const db = new sqlite.Database(':memory:');
 
-db.serialize(()  => {
-    db.run(`
-            CREATE TABLE visitors (
-                  count INTEGER,
-                  time TEXT
-            )
-        `)
+db.serialize(()         =>   {
+    db.run(`  
+    CREATE TABLE visitors    ( 
+         count    INTEGER,
+         time     TEXT
+    )
+
+    `)
 });
 
-function getCounts() {
-    db.each(" SELECT * FROM visitors" , (error, row) => {
+function getCounts()    {
+    db.each("SELECT * FROM visitors" ,  (err, row)     =>   {
         console.log(row);
     })
 }
