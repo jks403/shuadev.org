@@ -2,7 +2,7 @@ const http = require('http');
 
 http.createServer(function(req,res) {
 
-	res.write("On the way to becoming a full stack engineer!");
+	res.write("It's monday, President's day. February 19th On the way to becoming a full stack engineer!");
 	res.end();
 
 }
