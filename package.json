@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "fsfe",
   "version": "1.0.0",
   "description": "web sockets and clients",
@@ -21,4 +22,15 @@
     "sqlite3": "^5.1.7",
     "ws": "^8.16.0"
   }
+=======
+  "name": "first_project",
+  "version": "1.0.0",
+  "description": "first full stack development application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "joshua stewart",
+  "license": "ISC"
+>>>>>>> c3a0086 (committing all files)
 }
