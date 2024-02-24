@@ -1,21 +1,57 @@
 {
 
 
+  "name": "shuadev.org",
+
+  "version": "1.0.0",
+
+  "description": "web sockets and clients",
+
+  "main": "index.js",
+
+  "scripts": {
+
+    "test": "echo \"Error: no test specified\" && exit 1"
+
+  },
+
+
   "repository": {
+
     "type": "git",
     "url": "git+https://github.com/jks403/shuadev.org.git"
+=======
+
+    "url": "git+https://github.com/jks403/shuadev.org"
+
+
   },
 
   "author": "joshua stewart",
+
   "license": "ISC",
+
   "bugs": {
-    "url": "https://github.com/jks403/shuadev.org/issues"
+   "url": "https://github.com/jks403/shuadev.org/issues"
   },
   "homepage": "https://github.com/jks403/shuadev#readme",
+
+
+    "url": "https://github.com/jks403/shuadev.org/issues"
+
+  },
+
+  "homepage": "https://github.com/jks403/shuadev.org#readme",
+
+
   "dependencies": {
+
     "express": "^4.18.2",
+
     "sqlite3": "^5.1.7",
+
     "ws": "^8.16.0"
+<<<<<<< HEAD
   },
 
   "name": "first_project",
@@ -25,4 +61,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   }
+=======
+
+  }
+
+
 }
+
